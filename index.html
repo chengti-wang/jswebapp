@@ -1,26 +1,50 @@
-<html lang=”en”>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Name of your awesome camera app -->
-    <title>Camera App</title>
-    <!-- Link to your main style sheet-->
-    <link rel="stylesheet" href="style.css">
-</head>
 <body>
-    <!-- Camera -->
-    <main id="camera">
-        <!-- Camera sensor -->
-        <canvas id="camera--sensor"></canvas>
-        <!-- Camera view -->
-        <video id="camera--view" autoplay playsinline></video>
-        <!-- Camera output -->
-        <img src="//:0" alt="" id="camera--output">
-        <!-- Camera trigger -->
-        <button id="camera--trigger">Take a picture</button>
-    </main>
-    <!-- Reference to your JavaScript file -->
-    <script src="app.js"></script>
-</body>
-</html>
+  <style>
+    .square-box {
+      width: 33%;
+      height: 0;
+      padding-top: 33%;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+
+    .landmark-grid-container {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top:0;
+      left:0;
+      background-color: #99999999;
+    }
+  </style>
+  <div class="container">
+    <video class="input_video"></video>
+    <canvas class="output_canvas" width="1280px" height="720px"></canvas>
+    <div class="loading">
+      <div class="spinner"></div>
+      <div class="message">
+        Loading
+      </div>
+    </div>
+    <a class="abs logo" href="http://www.mediapipe.dev" target="_blank">
+      <div style="display: flex;align-items: center;bottom: 0;right: 10px;">
+        <img class="logo" src="logo_white.png" alt="" style="
+          height: 50px;">
+        <span class="title">MediaPipe</span>
+      </div>
+    </a>
+    <div class="shoutout">
+      <div>
+        <a href="https://solutions.mediapipe.dev/pose">
+          Click here for more info
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="control-panel">
+  </div>
+  <div class='square-box'>
+    <div class="landmark-grid-container">
+    </div>
+  </div>
